@@ -1,5 +1,7 @@
 const fibonacciNumbers = (num) => {
-    // Your implementation
-    // Read README.md file, if you not understand what to do
+    if (typeof(num) != "number") 
+        return 'Passed argument is not a number';
+
+    return num <= 1 ? num : fibonacciNumbers(num - 1) + fibonacciNumbers(num - 2)
 };
 module.exports = fibonacciNumbers;
